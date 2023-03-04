@@ -1,4 +1,4 @@
-# playright
+# playwright
 
 node version 19.7
 
