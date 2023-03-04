@@ -1,18 +1,20 @@
 import { test, expect } from '@playwright/test';
+const URL = 'https://www.atlassian.com/';
 
 test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
+  await page.goto(URL);
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
+  await expect(page).toHaveTitle(/Collaboration/);
 });
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects the URL to contain intro.
-  await expect(page).toHaveURL(/.*intro/);
+test('atlassian logo click', async ({ page }) => {
+    await page.goto(URL);
+    page.getByAltText("Atlassian logo").click    
 });
+
+test('products click', async ({ page }) => {
+  await page.goto(URL);
+  page.getByText("Products").click  
+});
+
+
