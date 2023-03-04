@@ -1,5 +1,8 @@
 # playright
 
+node version 19.7
+
+
 ## installing Playwright
 npm init playwright@latest
 
