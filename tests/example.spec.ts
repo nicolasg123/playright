@@ -18,3 +18,11 @@ test('products click', async ({ page }) => {
 });
 
 
+test('test 3', async ({ page }) => {
+  await page.goto(URL);
+  expect(await page.innerText("h1")).toContain("It’s possible")
+
+});
+
+
+
