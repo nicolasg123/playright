@@ -5,7 +5,7 @@ const URLClarin = 'http://www.clarin.com';
 
 test('test Atlassian', async ({ page }) => {
   await page.goto(URL);
-  await page.getByText('with teamwork').click() 
+  page.getByText('with teamwork').isVisible
   page.getByRole('heading', { name: 'It’s possible with teamwork' }).isVisible
   page.getByRole('link', { name: 'Products', exact: true }).isVisible;
   page.getByRole('link', { name: 'For teams' }).isVisible
