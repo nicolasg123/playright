@@ -11,3 +11,8 @@ npx playwright test
 
 ## Run reports
 npx playwright show-report
+
+## Playwright codeGen 
+npx playwright codegen demo.playwright.dev/todomvc
+
+
