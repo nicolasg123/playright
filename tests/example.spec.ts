@@ -20,5 +20,13 @@ test('test Clarin', async ({ page }) => {
   page.getByRole('link', { name: 'Claringrilla' }).nth(1).isVisible
 });
 
+test('test Clarin2', async ({ page }) => {
+  await page.goto(URLClarin);
+  await page.click('svg#Capa_1')
+  await page.click('span.mount')
+});
+
+
+
 
 
