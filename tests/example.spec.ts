@@ -24,9 +24,7 @@ test('test Clarin2', async ({ page }) => {
   await page.goto(URLClarin);
   await page.click('svg#Capa_1')
   await page.click('span.mount')
+  const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+// Sleeps for 2 seconds.
+  await sleep(2000);
 });
-
-
-
-
-
