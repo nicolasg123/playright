@@ -55,7 +55,7 @@ test('test github', async ({ page }) => {
   await page.goto(URLGithub);
   await page.getByRole('link', { name: 'Sign in' }).click();
   await page.getByLabel('Username or email address').click();
-  await page.getByLabel('Username or email address').fill('nicolas.grossi@gmail.com');
+  await page.getByLabel('Username or email address').fill(EMAIL);
   await page.getByLabel('Username or email address').press('Enter');
   await page.getByLabel('Password').click();
   await page.getByLabel('Password').fill(PASSWORD);
