@@ -62,14 +62,14 @@ test('test github', async ({ page }) => {
   await page.getByLabel('Password').press('Enter');
   await page.getByRole('button', { name: 'Sign in', exact: true }).click();
   await page.getByRole('button', { name: 'Verify' }).click();
-  await page.goto('https://github.com/');
+  await page.goto(URLGithub);
   await page.getByRole('button', { name: 'Switch dashboard: nicolasg123' }).click();
   await page.getByRole('option', { name: 'nicolasg123' }).click();
   await page.getByRole('link', { name: 'nicolasg123/playwright' }).click();
   await page.getByRole('button', { name: 'Switch dashboard: nicolasg123' }).click();
   await page.getByRole('dialog', { name: 'Switch dashboard context' }).click();
   await page.getByRole('link', { name: 'View organization' }).click();
-  await page.goto('https://github.com/qaJorney');
+  await page.goto(URLGithub);
   await page.getByLabel('Open global navigation menu').click();
   await page.getByRole('link', { name: 'Home', exact: true }).click();
   await page.getByLabel('Open user navigation menu').click();
