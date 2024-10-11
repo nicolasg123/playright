@@ -5,6 +5,7 @@ const URLLinkedin = 'http://www.linkedin.com';
 const URLGithub = 'https://github.com/nicolasg123';
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 const EMAIL = 'nicolas.grossi@gmail.com';
+const PASSWORD = 'SDET2024';
 
 
 
