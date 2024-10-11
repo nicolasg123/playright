@@ -53,6 +53,28 @@ test('test LINKEDIN', async ({ page }) => {
 
 test('test github', async ({ page }) => {
   await page.goto(URLGithub);
+  await page.getByRole('link', { name: 'Sign in' }).click();
+  await page.getByLabel('Username or email address').click();
+  await page.getByLabel('Username or email address').fill('nicolas.grossi@gmail.com');
+  await page.getByLabel('Username or email address').press('Enter');
+  await page.getByLabel('Password').click();
+  await page.getByLabel('Password').fill(PASSWORD);
+  await page.getByLabel('Password').press('Enter');
+  await page.getByRole('button', { name: 'Sign in', exact: true }).click();
+  await page.getByRole('button', { name: 'Verify' }).click();
+  await page.goto('https://github.com/');
+  await page.getByRole('button', { name: 'Switch dashboard: nicolasg123' }).click();
+  await page.getByRole('option', { name: 'nicolasg123' }).click();
+  await page.getByRole('link', { name: 'nicolasg123/playwright' }).click();
+  await page.getByRole('button', { name: 'Switch dashboard: nicolasg123' }).click();
+  await page.getByRole('dialog', { name: 'Switch dashboard context' }).click();
+  await page.getByRole('link', { name: 'View organization' }).click();
+  await page.goto('https://github.com/qaJorney');
+  await page.getByLabel('Open global navigation menu').click();
+  await page.getByRole('link', { name: 'Home', exact: true }).click();
+  await page.getByLabel('Open user navigation menu').click();
+  await page.getByLabel('Your profile').click();
+
   
 
 });
