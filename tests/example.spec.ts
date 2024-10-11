@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 const URL = 'https://www.atlassian.com/';
 const URLClarin = 'http://www.clarin.com';
 const URLLinkedin = 'http://www.linkedin.com';
+const URLGithub = 'https://github.com/nicolasg123';
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 const EMAIL = 'nicolas.grossi@gmail.com';
 
@@ -48,3 +49,11 @@ test('test LINKEDIN', async ({ page }) => {
   await page.getByRole('button', { name: 'Sign in', exact: true }).click();
   await sleep(5000);
 });
+
+test('test github', async ({ page }) => {
+  await page.goto(URLGithub);
+  
+
+});
+
+
