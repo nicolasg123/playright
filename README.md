@@ -1,6 +1,7 @@
 # playwright
 
 node version 19.7
+Please remember to update the PASSWORD on each run
 
 
 ## installing Playwright
